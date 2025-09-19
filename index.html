@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Tracker </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Masoom Jaach Wibhag</h1>
+            <p>Get live weather data for any city</p>
+        </div>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Enter city name..." id="cityInput">
+            </div>
+            <button class="search-btn" id="searchBtn">Get Weather</button>
+            <button class="location-btn" id="locationBtn">📍 Use My Location</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+
+        <div class="error" id="error">
+            <h3>⚠️ Error</h3>
+            <p id="errorMessage">City not found. Please try again.</p>
+        </div>
+
+        <div class="weather-card" id="weatherCard">
+            <div class="weather-main">
+                <div class="weather-icon" id="weatherIcon">☀️</div>
+                <div class="city-name" id="cityName">London</div>
+                <div class="temperature" id="temperature">22°C</div>
+                <div class="condition" id="condition">Sunny</div>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <div class="detail-label">Humidity</div>
+                    <div class="detail-value" id="humidity">65%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Wind Speed</div>
+                    <div class="detail-value" id="windSpeed">12 km/h</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Feels Like</div>
+                    <div class="detail-value" id="feelsLike">25°C</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Visibility</div>
+                    <div class="detail-value" id="visibility">10 km</div>
+                </div>
+            </div>
+            
+            <button class="add-favorite" id="addFavorite">⭐ Add to Favorites</button>
+        </div>
+
+        <div class="favorites" id="favorites">
+            <h3>Favorite Cities</h3>
+            <div class="favorite-cities" id="favoriteCities"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
